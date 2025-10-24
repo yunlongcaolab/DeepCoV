@@ -120,7 +120,7 @@ https://github.com/yunlongcaolab/convergent_RBD_evolution,
 https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS. 
 
 ## Usage
-### preprocessing
+### Preprocessing
 use scripts in preprocessing/ to generate aligned datasets and DMS features.
 
 ### Prediction
