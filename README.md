@@ -17,17 +17,6 @@ The repository is organized into modules for data preprocessing, model training,
 │   ├── ablation_topk_bar.R # top-k ablation bar plot
 │   ├── ablation_topk.R # top-k ablation
 │   ├── analysis # analysis output data
-│   ├── checkpoints
-│   ├── plots
-│   │   ├── ablation_jaccard_index_predtopK_truthtop3_sem.pdf
-│   │   ├── ablation_jaccard_index_predtopK_truthtop5_sem.pdf
-│   │   ├── ablation_mutscanning_scatter.pdf
-│   │   ├── ablation_success_rate_predtopK_truthtop1.pdf
-│   │   ├── BA.2.86+K478E_growth_reconstruction.pdf
-│   │   ├── JN1_module_ablations_curves_dynamic_Thres.pdf
-│   │   ├── KP.2_growth_reconstruction.pdf
-│   │   ├── TestMajor_RMSE_module_ablation_scatter.pdf
-│   │   └── top15_ablation_bar.pdf
 │   ├── predict_module_ablation.sh
 │   ├── results
 ├── benchmark # benchmarking DepCoV against other models (e.g., EVEscape, E2VD)
@@ -41,14 +30,6 @@ The repository is organized into modules for data preprocessing, model training,
 │   ├── EVEscape
 │   ├── growth_advantage
 │   ├── plots
-│   │   ├── jaccard_index_predtopK_truthtop3.pdf
-│   │   ├── jaccard_index_predtopK_truthtop5.pdf
-│   │   ├── success_rate_predtopK_truthtop1.pdf
-│   │   ├── timeline.pdf
-│   │   ├── Topk_metrics_curves_10major.pdf
-│   │   ├── Topk_metrics_curves_3major.pdf
-│   │   ├── Topk_roc_pr_curves_10major.pdf
-│   │   └── Topk_roc_pr_curves_3major.pdf
 │   ├── submit_sim.sh
 │   ├── timeline.R
 │   ├── topk_comparison.R
@@ -67,16 +48,7 @@ The repository is organized into modules for data preprocessing, model training,
 │   │       │   └── 2023-10-01
 │   │       └── spike
 │   ├── raw
-│   │   ├── metadata_241030.csv.gz
-│   │   ├── metadata_250516.csv.gz
-│   │   ├── spikeprot0516.fasta.gz
-│   │   └── spikeprot1030.fasta.gz
 │   └── reference # sequence references
-│       ├── isolate_time_table.csv
-│       ├── references_241030.aln
-│       ├── references_241030_chunk.aln
-│       ├── references_250516.aln
-│       └── references_250516_chunk.aln
 ├── DepCoV
 │   ├── dataset # dataset processing class
 │   ├── main_hotspots_predict.py
@@ -87,26 +59,9 @@ The repository is organized into modules for data preprocessing, model training,
 ├── environment.yml
 ├── generalization
 │   ├── continue # predict t0+1~t0+60 days
-│   │   ├── checkpoints
-│   │   ├── config
-│   │   ├── plot_continue.R
-│   │   ├── plots
-│   │   ├── predicted_JN1era_continue.sh
-│   │   ├── results
-│   │   └── train_JN1era_continue.sh
 │   ├── spike # trained on spike (train on dataset from data/processed/to241030/spike/2023-10-01)
-│   │   ├── checkpoints
-│   │   ├── config
-│   │   ├── plots
-│   │   └── results
 │   ├── update
-│   │   ├── plots
-│   │   └── results
 │   └── XBB_era # prediction XBB era (train on dataset from data/processed/to241030/rbd/2022-09-01)
-│       ├── checkpoints
-│       ├── config
-│       ├── plots
-│       └── results
 ├── insilico_mutational_hotspot_scanning
 │   ├── 01_single-residue_mutant_sequences_generation.py
 │   ├── 02_scanning_dataset_generation.py
@@ -120,52 +75,14 @@ The repository is organized into modules for data preprocessing, model training,
 │   ├── submit.sh
 │   └── Truth_curves.pdf
 ├── predict
-│   ├── checkpoints
-│   │   └── checkpoint-epoch-10-step-36410.pt
-│   ├── config
-│   │   └── config_JN1era_TestFull.yaml
-│   ├── predict.sh
-│   └── results
-│       └── rbd_single_JN1era
 ├── preprocessing
-│   ├── DMS
-│   ├── generate_name_mapper.py
-│   ├── __pycache__
-│   │   └── s3_all_uniq_seq.cpython-312.pyc
-│   ├── s00_updated_spike.py
-│   ├── s01_metadata_preliminary_filter.py
-│   ├── s1_uniq_spike.py
-│   ├── s2_make_alignment.py
-│   ├── s3_all_uniq_seq.py
-│   ├── s4_form_dataset_seq.py
-│   ├── s5_background_stat.py
-│   ├── s6_train_sample.py
-│   ├── s7_test_case_sample.py
-│   ├── s8_customize_sample.py
-│   ├── s8_test_sample_regions.py
-│   ├── sh
 ├── README.md
 └── spatiotemporal_evaluation
     ├── correlation.R
     ├── dynamic_assessment_under_variable_prevalence_threshold
-    │   ├── bak
-    │   ├── calc_evaluation_matrics_thresholds.py
-    │   ├── plot_dynamic_assessment.R
-    │   ├── plot_dynamic_venn.py
-    │   ├── results
-    │   ├── sh
-    │   └── submit_calc.sh
     ├── growth_trajectory_reconstruction.R
     ├── growth_trajectory_reconstruction_single.R
     ├── plots
-    │   ├── corr_JN1era_update_testmajor.pdf
-    │   ├── corr_JN1era_valtest.pdf
-    │   ├── dynamic_venn
-    │   ├── geographic_JN1era.pdf
-    │   ├── JN1_era_evaluation_dynamic_prop_thres.pdf
-    │   ├── JN1era_lineages_tragectory_mae_rmse.pdf
-    │   ├── JN1era_lineages_tragectory_minor.pdf
-    │   └── JN1era_lineages_tragectory.pdf
     └── prevalence_regional_heterogeneity.R
 
 ## environment setup
