@@ -1,22 +1,15 @@
 #!/bin/bash
 #SBATCH --job-name=JN1_test
-#SBATCH --output=/lustre/grp/cyllab/share/evolution_prediction_dl/predict/log/rbd_JN1era_LocDiffMajor_updateModel-%j.out        
-#SBATCH --error=/lustre/grp/cyllab/share/evolution_prediction_dl/predict/log/rbd_JN1era_LocDiffMajor_updateModel-%j.err           
+#SBATCH --output=predict/log/rbd_JN1era_LocDiffMajor_updateModel-%j.out        
+#SBATCH --error=predict/log/rbd_JN1era_LocDiffMajor_updateModel-%j.err           
 #SBATCH --partition=gpu11
 #SBATCH --nodes=1              
 #SBATCH --gres=gpu:8
 #SBATCH --time=14-00:00:00  
 
-cd /lustre/grp/cyllab/share/evolution_prediction_dl
-
-source /lustre/grp/cyllab/luoxw/anaconda3/etc/profile.d/conda.sh
-conda init
-conda activate evolutionpredict
-conda env list
-
 RUN_NAME=rbd_single_JN1era
 MODE=run_validation # run_train
-CONFIG=/lustre/grp/cyllab/share/evolution_prediction_dl/predict/config/config_JN1era_TestFull.yaml
+CONFIG=predict/config/config_JN1era_TestFull.yaml
 
 NNODES=1
 NODE_RANK=0
