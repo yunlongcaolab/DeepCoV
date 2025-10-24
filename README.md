@@ -87,7 +87,7 @@ The repository is organized into modules for data preprocessing, model training,
     └── prevalence_regional_heterogeneity.R
 ```
 
-## environment setup
+## Environment setup
 the environment is defined in environment.yml. to create the environment:
 ```
 conda env create -f environment.yml
@@ -95,7 +95,7 @@ conda activate evolutionpredict
 ```
 ensure the environment also contains required R packages (e.g., tidyverse, ggsci, ggvenn, plotnine, ggrepel).
 
-## raw input prepare
+## Raw input prepare
 1. data/raw/spikeprot1030.fasta.gz: raw sequence
 first download SARS-CoV-2 spike sequences from GISAID
 then run
@@ -119,17 +119,17 @@ https://github.com/jbloomlab/SARS2-RBD-escape-calc,
 https://github.com/yunlongcaolab/convergent_RBD_evolution,
 https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS. 
 
-## usage
+## Usage
 ### preprocessing
 use scripts in preprocessing/ to generate aligned datasets and DMS features.
 
-### prediction
+### Prediction
 use predict.sh and main_proportion_predict.py to run prevalence predictions.
 ```
 sbatch /lustre/grp/cyllab/share/evolution_prediction_dl/predict/predict.sh
 ```
 for training, set `MODE=run_train` and rewrite the corresponding config.yaml (e.g use_to_evaluate_checkpoint_path: null,dataset_csv_name: TrainVal.csv).
 
-### evaluation & visualization:
+### Evaluation & visualization:
 use scripts in benchmark/ and spatiotemporal_evaluation/ to generate performance metrics and plots.
 use scripts in insilico_mutational_hotspot_scanning/ to predict the potential convergent mutations (mutation hotspots).
