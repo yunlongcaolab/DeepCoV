@@ -1,0 +1,2 @@
+global_step,ValTestMajor_mse,ValTestMajor_rmse,ValTestMajor_pearson_corr,ValTestMajor_spearman_corr,ValTestMajor_time_lead_area
+36410,0.0014883018971916992,0.03857851600556583,0.9766748919817273,0.6253942308483968,312.67603941076646

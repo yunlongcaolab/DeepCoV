@@ -1,0 +1,2 @@
+global_step,LocDiffMajor_mse,LocDiffMajor_rmse,LocDiffMajor_pearson_corr,LocDiffMajor_spearman_corr,LocDiffMajor_time_lead_area
+36410,0.008171769011652041,0.09039783742796086,0.6850537522744901,0.48279544810715586,-4.486336375363933

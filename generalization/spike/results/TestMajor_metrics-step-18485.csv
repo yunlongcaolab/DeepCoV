@@ -1,0 +1,2 @@
+global_step,TestMajor_mse,TestMajor_rmse,TestMajor_pearson_corr,TestMajor_spearman_corr,TestMajor_time_lead_area
+18485,0.0011118488942538334,0.03334439824399045,0.9357853842480288,0.21547210329848554,664.0314077517097

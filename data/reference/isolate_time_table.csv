@@ -1,0 +1,33 @@
+description,antigen,date,country
+SARS,SARS,2002-11-01,China
+WuHan-hu-1,WT,2019-12-24,China
+D614G,B.1,2020-01-28,Germany
+B.1.1.7,Alpha,2020-09-20,United Kingdom
+B.1.351,Beta,2020-10-01,South Africa
+B.1.617.2,Delta,2020-10-01,India
+P.1,Gamma,2020-11-01,Brazil
+B.1.525,Eta,2020-12-15,United Kingdom
+Omicron,B.1.1.529,2021-11-09,South Africa
+Omicron,BA.1,2021-11-09,South Africa
+Omicron,BA.2,2021-11-27,Philippines
+Omicron,BA.4,2022-01-10,South Africa
+Omicron,BA.5,2022-02-25,South Africa
+Omicron,BF.7,2022-05-13,Belgium
+Omicron,BQ.1.1,2022-10-01,USA
+Omicron,XBB,2022-08-01,India
+Omicron,XBB.1.5,2022-10-22,USA
+Omicron,EG.5,2023-02-17,*
+Omicron,HK.3,2023-02-17,*
+Omicron,Flip,2023-03-06,*
+Omicron,BA.2.86,2023-07-26,Denmark
+Omicron,JN.1,2023-08-25,Luxembourg
+Omicron,KP.2,2023-12-04,*
+Omicron,KP.3,2023-12-18,*
+Omicron,XDV,2024-03-03,*
+Omicron,XEC,2024-06-30,*
+Omicron,LF.7,2024-08-02,*
+Omicron,LP.8,2024-09-27,*
+Omicron,NB.1,2024-08-19,*
+Omicron,NB.1.8.1,2025-02-01,*
+Omicron,XFG,2025-02-20,*
+Omicron,XFH,2025-01-21,*

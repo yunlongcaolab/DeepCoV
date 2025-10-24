@@ -1,0 +1,28 @@
+rbd_name_mut,date_top,method,topn,Event,direction,position,date
+JN.1,2023-10-21,ours,10,JN.1 rank top10,1,1,2023-10-21
+KP.2,2024-03-02,ours,10,KP.2 rank top10,-1,1,2024-03-02
+KP.3,2024-03-24,ours,10,KP.3 rank top10,1,1,2024-03-24
+JN.1,NA,EVEscape,10,JN.1 rank(2m) top10,1,1,2023-11-30
+KP.2,2024-01-15,EVEscape,10,KP.2 rank(2m) top10,-1,1,2024-01-15
+KP.3,NA,EVEscape,10,KP.3 rank(2m) top10,1,1,2024-05-17
+JN.1,NA,E2VD,10,JN.1 rank(2m) top10,1,1,2023-11-30
+KP.2,NA,E2VD,10,KP.2 rank(2m) top10,-1,1,2024-04-20
+KP.3,NA,E2VD,10,KP.3 rank(2m) top10,1,1,2024-05-17
+JN.1,2023-11-07,ours,3,JN.1 rank top3,1,2,2023-11-07
+KP.2,2024-03-11,ours,3,KP.2 rank top3,-1,2,2024-03-11
+KP.3,2024-04-27,ours,3,KP.3 rank top3,1,2,2024-04-27
+JN.1,NA,EVEscape,3,JN.1 rank(2m) top3,1,2,2023-11-30
+KP.2,NA,EVEscape,3,KP.2 rank(2m) top3,-1,2,2024-04-20
+KP.3,NA,EVEscape,3,KP.3 rank(2m) top3,1,2,2024-05-17
+JN.1,NA,E2VD,3,JN.1 rank(2m) top3,1,2,2023-11-30
+KP.2,NA,E2VD,3,KP.2 rank(2m) top3,-1,2,2024-04-20
+KP.3,NA,E2VD,3,KP.3 rank(2m) top3,1,2,2024-05-17
+JN.1,2023-11-30,truth,NA,JN.1 > 20%,1,1.5,2023-11-30
+KP.2,2024-04-20,truth,NA,KP.2 > 20%,-1,1.5,2024-04-20
+KP.3,2024-05-17,truth,NA,KP.3 > 20%,1,1.5,2024-05-17
+JN.1,2023-10-08,truth,NA,JN.1 sequences > 10,1,0.5,2023-10-08
+KP.2,2024-03-01,truth,NA,KP.2 sequences > 10,-1,0.5,2024-03-01
+KP.3,2024-04-02,truth,NA,KP.3 sequences > 10,1,0.5,2024-04-02
+JN.1,2023-11-03,truth,NA,JN.1 advantage > 30%,1,1,2023-11-03
+KP.2,2024-03-21,truth,NA,KP.2 advantage > 30%,-1,1,2024-03-21
+KP.3,2024-04-11,truth,NA,KP.3 advantage > 30%,1,1,2024-04-11
