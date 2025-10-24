@@ -6,6 +6,7 @@ This repository contains the codebase, data, and analysis pipelines for DepCoV, 
 The repository is organized into modules for data preprocessing, model training, prediction, benchmarking, ablation studies, in silico mutational scanning, and spatiotemporal evaluation.
 
 ## Directory Structure
+```
 /lustre/grp/cyllab/share/evolution_prediction_dl
 ├── ablation # ablation studies for evaluating model components
 │   ├── ablation_bar_scatter.R # ablation RMSE from three independent replicates
@@ -84,6 +85,7 @@ The repository is organized into modules for data preprocessing, model training,
     ├── growth_trajectory_reconstruction_single.R
     ├── plots
     └── prevalence_regional_heterogeneity.R
+```
 
 ## environment setup
 the environment is defined in environment.yml. to create the environment:
