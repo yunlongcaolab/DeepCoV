@@ -7,7 +7,7 @@ The repository is organized into modules for data preprocessing, model training,
 
 ## Directory Structure
 ```
-/lustre/grp/cyllab/share/evolution_prediction_dl
+DeepCoV
 ├── ablation # ablation studies for evaluating model components
 │   ├── ablation_bar_scatter.R # ablation RMSE from three independent replicates
 │   ├── ablation_dynamic_thres_curves.R # ablation curves under variable thresholds
@@ -109,7 +109,14 @@ manually download and combine the metadata: raw_metadata_241030.csv.gz and raw_m
 3. (deleted) data/raw/all_epi_ids_250517.csv: all accessible gisaid ids download through GisaidR
 
 4. The deep mutational scanning datasets for single mutations obtained from  public repositories including:
-https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-EG5-FLip-BA286, https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ, https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps, https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding,https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS, https://github.com/dms-vep/SARS-CoV-2_Delta_spike_DMS_REGN10933, https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.1_spike_DMS_mAbs,https://github.com/jbloomlab/SARS2-RBD-escape-calc, https://github.com/yunlongcaolab/convergent_RBD_evolution,https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS. 
+> https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-EG5-FLip-BA286,
+> https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ,
+> https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps,
+> https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding,
+> https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS,
+> https://github.com/dms-vep/SARS-CoV-2_Delta_spike_DMS_REGN10933,
+> https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.1_spike_DMS_mAbs,https://github.com/jbloomlab/SARS2-RBD-escape-calc,
+> https://github.com/yunlongcaolab/convergent_RBD_evolution,https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS. 
 
 ## Usage
 ### Preprocessing
