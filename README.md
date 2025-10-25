@@ -116,10 +116,18 @@ manually download and combine the metadata: raw_metadata_241030.csv.gz and raw_m
 > https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps
 > 
 > https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding
+> 
 > https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS
+> 
 > https://github.com/dms-vep/SARS-CoV-2_Delta_spike_DMS_REGN10933
-> https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.1_spike_DMS_mAbs,https://github.com/jbloomlab/SARS2-RBD-escape-calc
-> https://github.com/yunlongcaolab/convergent_RBD_evolution,https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS
+> 
+> https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.1_spike_DMS_mAbs
+> 
+> https://github.com/jbloomlab/SARS2-RBD-escape-calc
+> 
+> https://github.com/yunlongcaolab/convergent_RBD_evolution
+> 
+> https://github.com/yunlongcaolab/SARS-CoV-2-reinfection-DMS
 
 ## Usage
 ### Preprocessing
