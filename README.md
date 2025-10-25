@@ -109,7 +109,8 @@ manually download and combine the metadata: raw_metadata_241030.csv.gz and raw_m
 3. (deleted) data/raw/all_epi_ids_250517.csv: all accessible gisaid ids download through GisaidR
 
 4. The deep mutational scanning datasets for single mutations obtained from  public repositories including:
-https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-EG5-FLip-BA286, https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ, 
+https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-EG5-FLip-BA286,
+https://github.com/tstarrlab/SARS-CoV-2-RBD_DMS_Omicron-XBB-BQ, 
 https://github.com/jbloomlab/SARS2_RBD_Ab_escape_maps, 
 https://github.com/dms-vep/SARS-CoV-2_Omicron_BA.2_spike_ACE2_binding, 
 https://github.com/dms-vep/SARS-CoV-2_XBB.1.5_spike_DMS, 
