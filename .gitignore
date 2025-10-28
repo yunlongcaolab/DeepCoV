@@ -1,0 +1,113 @@
+# =========================
+# Path base: DeepCoV/
+# =========================
+
+# ---- ablation ----
+ablation/checkpoints/
+ablation/generate_repeat_scripts_module_ablation_test.sh
+ablation/plots/
+ablation/results/
+ablation/train_ablation.sh
+
+# ---- benchmark ----
+benchmark/DMS/fitting/data/
+benchmark/DMS/fitting/log/
+benchmark/E2VD/data/
+benchmark/E2VD/log/
+benchmark/E2VD/model/
+benchmark/EVEscape/data/
+benchmark/growth_advantage/logs/
+benchmark/growth_advantage/rbd_test_JN1era_ga.csv
+benchmark/growth_advantage/rbd_test_XBBera_ga.csv
+benchmark/growth_advantage/results/
+benchmark/growth_advantage/spike_test_JN1era_ga.csv
+benchmark/plots/
+benchmark/submit_sim.sh
+
+# ---- data ----
+data/dms/
+data/raw/
+
+# processed -> to241030
+data/processed/to241030/meta241030.csv.gz
+data/processed/to241030/rbd/2022-09-01/TestFull.csv
+data/processed/to241030/rbd/2022-09-01/TestFullRegions2022-08-01to2024-05-01.csv
+data/processed/to241030/rbd/2023-10-01/TestFull.csv
+data/processed/to241030/rbd/2023-10-01/TestMajor.csv
+data/processed/to241030/rbd/rbd_background_stat.npz
+data/processed/to241030/rbd/rbd_candidates.csv
+data/processed/to241030/rbd/rbd_count.log
+data/processed/to241030/rbd/rbd_count.npz
+data/processed/to241030/rbd/rbd_count_smooth.npz
+data/processed/to241030/rbd/rbd_seq_count_sample.png
+data/processed/to241030/rbd/rbd_total_count.png
+data/processed/to241030/spike/2023-10-01/TestFull.csv
+data/processed/to241030/spike/spike_background_stat.npz
+data/processed/to241030/spike/spike_candidates.csv
+data/processed/to241030/spike/spike_count.log
+data/processed/to241030/spike/spike_count.npz
+data/processed/to241030/spike/spike_count_smooth.npz
+data/processed/to241030/spike/spike_seq_count_sample.png
+data/processed/to241030/spike/spike_total_count.png
+data/processed/to241030/spike_meta241030.csv.gz
+data/processed/to241030/uniq_rbd241030.aln.gz
+data/processed/to241030/uniq_spike241030.aln.gz
+
+# processed -> to250516
+data/processed/to250516/meta250516.csv.gz
+data/processed/to250516/rbd/2023-10-01/TestFull.csv
+data/processed/to250516/rbd/rbd_background_stat.npz
+data/processed/to250516/rbd/rbd_candidates.csv
+data/processed/to250516/rbd/rbd_count.log
+data/processed/to250516/rbd/rbd_count.npz
+data/processed/to250516/rbd/rbd_count_smooth.npz
+data/processed/to250516/rbd/rbd_seq_count_sample.png
+data/processed/to250516/rbd/rbd_total_count.png
+data/processed/to250516/spike/
+data/processed/to250516/spike_meta250516.csv.gz
+data/processed/to250516/uniq_rbd250516.aln.gz
+data/processed/to250516/uniq_spike250516.aln.gz
+
+# ---- DepCoV caches ----
+DepCoV/dataset/__pycache__/
+DepCoV/model/__pycache__/
+DepCoV/utils/esm/__pycache__/
+
+# ---- generalization ----
+generalization/continue/checkpoints/
+generalization/spike/checkpoints/
+generalization/spike/results/TestFull_metrics-step-18485.csv
+generalization/spike/results/TestFull_regres_outputs_labels-step-18485.csv
+generalization/update/results/TestFull_metrics-step-36410.csv
+generalization/update/results/TestFull_regres_outputs_labels-step-36410.csv
+generalization/XBB_era/checkpoints/
+generalization/XBB_era/results/TestFull_metrics-step-38360.csv
+generalization/XBB_era/results/TestFull_regres_outputs_labels-step-38360.csv
+
+# ---- insilico_mutational_hotspot_scanning ----
+insilico_mutational_hotspot_scanning/bak/
+insilico_mutational_hotspot_scanning/config/
+insilico_mutational_hotspot_scanning/data/
+insilico_mutational_hotspot_scanning/.ipynb_checkpoints/
+insilico_mutational_hotspot_scanning/results/
+
+# ---- predict ----
+predict/checkpoints/
+predict/results/rbd_single_JN1era/TestFull_metrics-step-36410.csv
+predict/results/rbd_single_JN1era/TestFullRegions2022-08-01to2024-05-01_metrics-step-36410.csv
+predict/results/rbd_single_JN1era/TestFullRegions2022-08-01to2024-05-01_regres_outputs_labels-step-36410.csv
+predict/results/rbd_single_JN1era/TestFull_regres_outputs_labels-step-36410.csv
+
+# ---- preprocessing ----
+preprocessing/.ipynb_checkpoints/
+preprocessing/__pycache__/
+preprocessing/sh/
+preprocessing/tmp/
+
+# ---- spatiotemporal_evaluation ----
+spatiotemporal_evaluation/bak/
+spatiotemporal_evaluation/dynamic_assessment_under_variable_prevalence_threshold/bak/
+spatiotemporal_evaluation/dynamic_assessment_under_variable_prevalence_threshold/results/
+spatiotemporal_evaluation/dynamic_assessment_under_variable_prevalence_threshold/sh/
+spatiotemporal_evaluation/dynamic_assessment_under_variable_prevalence_threshold/submit_calc.sh
+spatiotemporal_evaluation/plots/
