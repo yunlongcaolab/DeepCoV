@@ -1,4 +1,4 @@
-# DepCoV: Evolutionary Prediction and Analysis Framework
+# DeepCoV: DMS-Empowered Evolution Prediction of CoronaVirus
 
 ## Overview
 This repository contains the codebase, data, and analysis pipelines for DepCoV, a framework designed for forecasting the prevalence and evolution of SARS-CoV-2 variants. It integrates evolutionary sequences, mutational scanning, and epidemiological modeling to analyze dominant variants, predict mutational hotspots, and evaluate variant dynamics.
