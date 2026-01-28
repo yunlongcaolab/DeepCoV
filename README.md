@@ -92,9 +92,14 @@ DeepCoV
 the environment is defined in environment.yml. to create the environment:
 ```
 conda env create -f environment.yml
-conda activate evolutionpredict
+conda activate deepcov
 ```
-ensure the environment also contains required R packages (e.g., tidyverse, ggsci, ggvenn, plotnine, ggrepel).
+for downstream analysis and benchmakr, please create the addtitional R environment:
+```
+conda env create -f environment_r_analysis.yml
+conda activate r_deepcov_analysis
+```
+to ensure the environment also contains required R packages (e.g., tidyverse, ggsci, ggvenn, plotnine, ggrepel).
 
 ## Raw input prepare
 1. data/raw/spikeprot1030.fasta.gz: raw sequence
