@@ -1,0 +1,20 @@
+name: r_deepcov_analysis
+channels:
+  - conda-forge
+  - bioconda
+  - r
+  - defaults
+dependencies:
+  - r-base=4.3.1
+  - python=3.12.5
+  - r-tidyverse=2.0.0     
+  - r-ggsci=3.2.0
+  - r-cowplot=1.2.0
+  - r-caret=6.0_94
+  - r-jsonlite=1.8.7
+  - r-future.apply=1.11.0
+  - r-ggvenn=0.1.10
+  - r-ggrepel=0.9.6
+  - r-zoo=1.8_12
+  - r-ggseqlogo=0.1
+  - bioconductor-biostrings=2.70.1

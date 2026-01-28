@@ -12,17 +12,23 @@ ablation/results/
 ablation/train_ablation.sh
 
 # ---- benchmark ----
+benchmark/bak_revision/
 benchmark/DMS/fitting/data/
 benchmark/DMS/fitting/log/
+benchmark/DMS/fitting/results/
 benchmark/E2VD/data/
 benchmark/E2VD/log/
 benchmark/E2VD/model/
+benchmark/E2VD/results/
 benchmark/EVEscape/data/
 benchmark/growth_advantage/logs/
 benchmark/growth_advantage/rbd_test_JN1era_ga.csv
 benchmark/growth_advantage/rbd_test_XBBera_ga.csv
 benchmark/growth_advantage/results/
 benchmark/growth_advantage/spike_test_JN1era_ga.csv
+benchmark/MLR/analysis/
+benchmark/MLR/plots/
+benchmark/MLR/results/
 benchmark/plots/
 benchmark/submit_sim.sh
 
@@ -33,20 +39,23 @@ data/processed/to241030/
 data/processed/to250516/
 
 # ---- DepCoV caches ----
-DepCoV/dataset/__pycache__/
-DepCoV/model/__pycache__/
-DepCoV/utils/esm/__pycache__/
+DeepCoV/dataset/__pycache__/
+DeepCoV/model/__pycache__/
+DeepCoV/utils/esm/__pycache__/
 
 # ---- generalization ----
 generalization/continue/checkpoints/
+generalization/continue/plots/
+generalization/continue/results/
 generalization/spike/checkpoints/
-generalization/spike/results/TestFull_metrics-step-18485.csv
-generalization/spike/results/TestFull_regres_outputs_labels-step-18485.csv
-generalization/update/results/TestFull_metrics-step-36410.csv
-generalization/update/results/TestFull_regres_outputs_labels-step-36410.csv
+generalization/spike/results/
+generalization/spike/plots/
+generalization/update/plots/
+generalization/update/results/
 generalization/XBB_era/checkpoints/
-generalization/XBB_era/results/TestFull_metrics-step-38360.csv
-generalization/XBB_era/results/TestFull_regres_outputs_labels-step-38360.csv
+generalization/XBB_era/results/
+generalization/XBB_era/plots/
+
 
 # ---- insilico_mutational_hotspot_scanning ----
 insilico_mutational_hotspot_scanning/bak/
@@ -80,3 +89,8 @@ spatiotemporal_evaluation/plots/
 bak/
 website/
 wandb/
+
+# global
+__pycache__/
+*.pyc
+*.log

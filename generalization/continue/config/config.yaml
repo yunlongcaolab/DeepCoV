@@ -1,0 +1,60 @@
+dataset:
+  min_total_isolates_t1: 100.0
+  path:
+    base_dms_npz: /lustre/grp/cyllab/share/evolution_prediction_dl/data/dms/_dms.npz
+    count_npz: /lustre/grp/cyllab/share/evolution_prediction_dl/data/processed/to241030/rbd/rbd_count_smooth.npz
+    dataset_csv_base_path: /lustre/grp/cyllab/share/evolution_prediction_dl/data/processed/to241030/rbd
+    dataset_csv_name: TrainVal.csv
+    esm2_150m_model_path: /lustre/grp/cyllab/share/open_dataset/models/transformers_models/esm2_t30_150M_UR50D
+    msa_transformer_model_path: /lustre/grp/cyllab/share/open_dataset/models/transformers_models/esm_msa1b_t12_100M_UR50S/esm_msa1b_t12_100M_UR50S.pt
+    test_split_time: '2023-10-01'
+  t1_isolate_filter: 1.0
+  tag: rbd
+feature:
+  ab_cluster: 56
+  dms:
+  - ab_escape
+  - ace2_binding
+  - ace2_neutralizing
+  - expression
+  - mediated_entry
+  - sera_escape
+  dms_delay: 0
+  max_bg_point: 60
+  n_bg_days: 180
+  stride: 3
+  top_k: 16
+hyperparameters:
+  batch_size: 5
+  early_stopping_patience: 10
+  learning_rate: 0.0001
+  num_epochs: 60
+  warmup_steps: 300
+  weight_decay: 0.01
+label:
+  t1_day_continue_weight: 30
+  t1_label_weight_type: t1_label
+  t1_mask_type: total_isolates_t1
+  target_t1_point: 60
+model:
+  DMS_encoder_out_dim: 128
+  DMS_encoder_seq_dim: 128
+  bg_ratios_encoder: true
+  bg_ratios_encoder_dim: 128
+  bg_ratios_encoder_num_layers: 2
+  dms_ab_class_weight: false
+  dms_layer_dim: 128
+  evopredict_embedding_dim: 256
+  evoprediction_num_layers: 3
+  lstm_output_num_layers: 1
+  msa_transformer_unfreeze_layer: 0
+  seq_encoder: msa_transformer
+  target_only: false
+  transformer_num_layers: 2
+other:
+  logging_steps: 10
+  output_dir: /lustre/grp/cyllab/share/evolution_prediction_dl/generalization/continue/results
+  save_model_train: true
+  wandb_resume: null
+  wandb_resume_id: null
+  ablation: true
