@@ -139,8 +139,8 @@ use predict.sh and main_proportion_predict.py to run prevalence predictions.
 conda activate deepcov
 sbatch predict/predict.sh
 ```
-then the results could be found at predict/results for downstream analysis. (Expected run time: ~10min for major strain set)
-for training, set `MODE=run_train` and rewrite the corresponding config.yaml (e.g use_to_evaluate_checkpoint_path: null,dataset_csv_name: TrainVal.csv).
+then the results could be found at predict/results for downstream analysis (Expected run time: ~10min for major strain set). 
+For training, set `MODE=run_train` and rewrite the corresponding config.yaml (e.g use_to_evaluate_checkpoint_path: null,dataset_csv_name: TrainVal.csv).
 
 
 ### Evaluation & Analysis:
