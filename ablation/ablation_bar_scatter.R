@@ -35,7 +35,8 @@ case_4_rep3 <- read_csv(str_glue('{data_dir}/ablation/results/no_backgrounds_rep
 case_data_rep3 <- bind_rows(case_1_rep3, case_2_rep3, case_3_rep3, case_4_rep3)
 case_data_rep3 <- case_data_rep3 %>% mutate(model = factor(model, levels = rev(model_levels), ordered = TRUE))
 
-data_bind = bind_rows(case_data_rep,case_data_rep2,case_data_rep3) 
+data_bind = bind_rows(case_data_rep,case_data_rep2,case_data_rep3) %>% select(model, TestMajor_rmse)
+data_bind %>% write_csv(str_glue('{data_dir}/ablation/analysis/ablation_rmse.csv'))
 
 p = ggplot(data_bind, aes(x=model, y=TestMajor_rmse, fill=model))+
     stat_summary(fun='mean', geom='bar',show.legend = F,alpha = 0.3,linewidth=0.3)+

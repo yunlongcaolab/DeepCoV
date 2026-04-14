@@ -8,6 +8,7 @@ library(ggvenn)
 # 
 data_dir='/lustre/grp/cyllab/share/evolution_prediction_dl'
 plot_dir=str_glue('{data_dir}/benchmark/plots')
+analysis_dir=str_glue('{data_dir}/benchmark/analysis/venn')
 
 rbd_name_mapper <- fromJSON(str_glue("{data_dir}/data/processed/to241030/rbd_name_mapper.json"))
 meta <- read_csv(str_glue("{data_dir}/data/processed/to241030/meta241030.csv.gz"))
@@ -69,6 +70,10 @@ plot_venn_comparison <- function(target_date, n_truth_top = 5, n_pred_top = 5) {
 
     
     date_predict = target_date + days(30)
+
+    data.frame(Model = c(rep("truth", length(truth_set)), rep("DeepCoV", length(ours_set)), rep("MLR", length(mlr_set)), rep("EVEscape", length(EVEscape_set)), rep("E2VD", length(E2VD_set))),
+               Strain = c(truth_set,ours_set, mlr_set, EVEscape_set, E2VD_set)) %>% write_csv(str_glue('{analysis_dir}/dynamic_topk_venn_{date_predict}_predtop{n_pred_top}_truthtop{n_truth_top}_data.csv')) 
+    
     pdf(str_glue('{plot_dir}/dynamic_topk_venn_{date_predict}_predtop{n_pred_top}_truthtop{n_truth_top}.pdf'),width=5,height=3)
     print(p1)
     print(p2)

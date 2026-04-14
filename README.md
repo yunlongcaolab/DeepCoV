@@ -94,12 +94,14 @@ the environment is defined in environment.yml. to create the environment:
 conda env create -f environment.yml
 conda activate deepcov
 ```
-for downstream analysis and benchmakr, please create the addtitional R environment:
+for downstream analysis and benchmark, please create the addtitional R environment:
 ```
 conda env create -f environment_r_analysis.yml
 conda activate r_deepcov_analysis
 ```
 to ensure the environment also contains required R packages (e.g., tidyverse, ggsci, ggvenn, plotnine, ggrepel).
+
+(Typical install time: ~20min)
 
 ## Raw input prepare
 1. data/raw/spikeprot1030.fasta.gz: raw sequence
@@ -137,8 +139,9 @@ use predict.sh and main_proportion_predict.py to run prevalence predictions.
 conda activate deepcov
 sbatch predict/predict.sh
 ```
-then the results could be found at predict/results for downstream analysis.
+then the results could be found at predict/results for downstream analysis. (Expected run time: ~10min for major strain set)
 for training, set `MODE=run_train` and rewrite the corresponding config.yaml (e.g use_to_evaluate_checkpoint_path: null,dataset_csv_name: TrainVal.csv).
+
 
 ### Evaluation & Analysis:
 use scripts in benchmark/ and spatiotemporal_evaluation/ to generate performance metrics and plots.

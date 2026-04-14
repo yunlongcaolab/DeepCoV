@@ -23,10 +23,11 @@ res3 = read_csv(str_glue('{data_dir}/ablation/results/no_backgrounds_rep1/TestFu
   mutate(model='no backgrounds')
 dat = bind_rows(res1,res2,res3)
 
-# strain_select = 'KP.2'
-strain_select = 'BA.2.86+K478E'
+strain_select = 'KP.2'
+# strain_select = 'BA.2.86+K478E'
+dat %>% filter(rbd_name_mut == strain_select) %>% write_csv(str_glue('{data_dir}/ablation/analysis/{strain_select}_growth_reconstruction_data.csv'))
 
-dat_plot = dat %>% filter(rbd_name_mut == strain_select )
+dat_plot = dat %>% filter(rbd_name_mut == strain_select)
 p = ggplot(data = dat_plot # %>% filter(rbd_name_mut == 'KP.2')
           ) + 
         geom_line(aes(x=t0, y=target_ratio_t0),color='black') + 

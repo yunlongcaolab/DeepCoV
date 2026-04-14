@@ -12,6 +12,7 @@ ablation/results/
 ablation/train_ablation.sh
 
 # ---- benchmark ----
+benchmark/analysis/
 benchmark/bak_revision/
 benchmark/DMS/fitting/data/
 benchmark/DMS/fitting/log/

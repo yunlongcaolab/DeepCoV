@@ -22,19 +22,10 @@ tag='rbd'
 # plot_width = 8
 
 ### JN.1 era
-# name_mapper <- fromJSON(str_glue("{data_dir}/data/processed/to241030/rbd_name_mapper.json"), simplifyVector = T)
-# res = read_csv(str_glue('{data_dir}/predict/results/rbd_single_JN1era/TestFull_regres_outputs_labels-step-36410.csv')) %>% 
-#       mutate(rbd_name_mut= name_mapper[rbd_name] %>% unname %>% as.character)
-# out_file = str_glue('{data_dir}/spatiotemporal_evaluation/plots/JN1era_lineages_tragectory.pdf')
-# strain_draw = c('HK.3','BA.2.86','JN.1','KP.2','KP.3')
-# colors = c(pal_locuszoom("default")(6),"#2B9B81FF")
-# plot_width = 7
-
-### JN.1 code testing
 name_mapper <- fromJSON(str_glue("{data_dir}/data/processed/to241030/rbd_name_mapper.json"), simplifyVector = T)
-res = read_csv('/lustre/grp/cyllab/share/evolution_prediction_dl/predict/results/rbd_single_JN1era_revis/TestFull_regres_outputs_labels-step-36410.csv') %>% 
+res = read_csv(str_glue('{data_dir}/predict/results/rbd_single_JN1era/TestFull_regres_outputs_labels-step-36410.csv')) %>% 
       mutate(rbd_name_mut= name_mapper[rbd_name] %>% unname %>% as.character)
-out_file = str_glue('/lustre/grp/cyllab/share/evolution_prediction_dl/predict/results/rbd_single_JN1era_revis/JN1era_lineages_tragectory.pdf')
+out_file = str_glue('{data_dir}/spatiotemporal_evaluation/plots/JN1era_lineages_tragectory.pdf')
 strain_draw = c('HK.3','BA.2.86','JN.1','KP.2','KP.3')
 colors = c(pal_locuszoom("default")(6),"#2B9B81FF")
 plot_width = 7
@@ -104,18 +95,18 @@ pdf(out_file,height = 4,width=plot_width)
 p 
 dev.off()
 
-### MAE & RMSE
+### MAE & RMSE for JN.1 era
 # # errors_test = res_week %>% rename(date = t1_biweekly) %>% group_by(date) %>% 
 # #     summarize(rmse = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[1] %>% unname,
 # #               mae = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[3] %>% unname)
 # # errors_dataset = bind_rows(errors_case %>% mutate(dataset='major strains'),errors_test %>% mutate(dataset='all strains'))
 
-
-# errors_case = res_week %>% rename(date = t1_biweekly) %>% filter(rbd_name_mut %in% strain_draw) %>% 
-#     group_by(date) %>% 
-#     summarize(rmse = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[1] %>% unname,
-#               mae = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[3] %>% unname)
-# errors_dataset = errors_case %>% mutate(dataset='major strains')
+errors_case = res_week %>% rename(date = t1_biweekly) %>% filter(rbd_name_mut %in% strain_draw) %>% 
+    group_by(date) %>% 
+    summarize(rmse = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[1] %>% unname,
+              mae = postResample(pred = target_ratio_t1_output, obs = target_ratio_t1_label)[3] %>% unname)
+errors_dataset = errors_case %>% mutate(dataset='major strains')
+errors_dataset %>% write_csv(str_glue('{data_dir}/spatiotemporal_evaluation/analysis/growth_reconstruction_rmse_mae.csv'))
 
 # p1 = errors_dataset  %>% 
 #     ggplot(aes(x = date,y = rmse,color=dataset)) + 

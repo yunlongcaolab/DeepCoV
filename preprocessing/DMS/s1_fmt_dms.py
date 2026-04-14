@@ -1,7 +1,3 @@
-"""
-@Author: Luo Jiejian
-@Date: 2024/11/9
-"""
 import argparse
 import os
 

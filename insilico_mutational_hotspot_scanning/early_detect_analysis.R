@@ -23,15 +23,12 @@ dat_compare = dat_compare %>% filter(rbd_name_mut!='XBB.1.5+K478R') %>%
 p1 = dat_compare %>% # filter(rbd_name_mut %in% c('JN.1+R346T','JN.1+F456L')==FALSE) %>% 
   ggplot(aes(x = status,y = ratio,color = `mutant harbouring hotspots`)) + 
   geom_point(size = 2,alpha=0.5) + 
-  # geom_point(size = 2,shape=21,alpha=0.5) + 
   geom_line(aes(group = rbd_name_mut),alpha=0.3) + 
   scale_y_continuous(limits=c(0,0.7))  + 
   theme_classic() + scale_color_npg()  + 
   geom_signif(comparisons = list(c(1,2)),
               tip_length = 0.05,color = 'black',step_increase = 0.07,
-              # map_signif_level = TRUE,
               y_position = 0.65
-              # annotation = c('a','b','c')
   ) + labs(x='proportion') + 
   theme(axis.title = element_text(size = 14),axis.text  = element_text(size = 12),
     legend.title = element_text(size = 13),legend.text  = element_text(size = 12),
@@ -62,17 +59,12 @@ for(i in unique(dat_compare_period$rbd_name_mut)){
   p = dat_draw %>% 
     mutate(status = ifelse(status =='max','peak',status)) %>% 
     ggplot(aes(x = status,y = ratio)) + 
-    # facet_wrap(~rbd_name_mut) + 
     geom_point(size = 0.2,shape=21,alpha=0.5,color = colors[i]) + 
-    # geom_point(size = 2,shape=21,alpha=0.5) + 
-    # geom_line(aes(group = rbd_name_mut),alpha=0.3) + 
     scale_y_continuous(limits=c(0,max(dat_draw$ratio)+0.1))  + 
     theme_classic() + scale_color_npg()  + 
     geom_signif(comparisons = list(c(1,2)),
                 tip_length = 0.05,color = 'black',step_increase = 0.07,
                 map_signif_level = TRUE
-                # y_position = 0.65,
-                # annotation = c('a','b','c')
     ) +labs(title=i) + theme(plot.title = element_text(size = 10))
   ps[[i]] = p
 }

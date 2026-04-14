@@ -72,10 +72,10 @@ for(i in thresholds){
     }
 }
 result_metrics = bind_rows(result_metrics)
+result_metrics %>% write_csv(str_glue('{file_dir}/benchmark_variable_prevalence_threshold_result_metrics.csv'))
 
 result_metrics_long = result_metrics %>%pivot_longer(cols = -c(method, proportion_threshold,n_actual_positive),names_to = "evaluation metrics",values_to = "score") %>% 
     mutate(n_actual_positive_label = ifelse(`evaluation metrics` == 'FDR',n_actual_positive,NA))
-
 p = ggplot(result_metrics_long %>% filter(method=='ours'), aes(x = proportion_threshold, y = score, color = `evaluation metrics`)) +
   geom_line() + 
   geom_point(size = 1.5, fill = "white") + # shape = 21, 

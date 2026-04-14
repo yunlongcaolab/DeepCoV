@@ -42,10 +42,10 @@ p =ggplot(test_major,aes(x = target_ratio_t1_label,y=target_ratio_t1_output,colo
       label = paste0("pearson correlation = ", round(cor(test_major$target_ratio_t1_label,test_major$target_ratio_t1_output), 3)), size = 8,  hjust = 0 
     )
 
-test_major_rising <- test_major %>%
-  group_by(!!sym(str_glue('{tag}_name'))) %>%
-  mutate(max_t0 = t0[which.max(target_ratio_t1_output)]) %>%
-  filter(t0 <= max_t0)
+# test_major_rising <- test_major %>%
+#   group_by(!!sym(str_glue('{tag}_name'))) %>%
+#   mutate(max_t0 = t0[which.max(target_ratio_t1_output)]) %>%
+#   filter(t0 <= max_t0)
 
 # p =ggplot(test_major_rising,aes(x = target_ratio_t1_label,y=target_ratio_t1_output,color = !!sym(str_glue('{tag}_name_mut')))) + #  # spike_name_mut
 #     geom_point(alpha=0.5,size=1.5) + theme_classic() + scale_color_d3(palette="category20c")+
