@@ -260,12 +260,12 @@ if __name__ == "__main__":
     case.to_csv(os.path.join(sub_dir, "TestMajor.csv"), index=False)
 
     # for test dataset
-    # func_test = FullTestMaker(opts.candidate_file, opts.count_npz_sm,
-    #                             opts.background_stat_npz, tag=opts.tag,
-    #                             n_bg_clusters_threshold=opts.n_bg_clusters_threshold,
-    #                             t1_isolates_total=opts.t1_isolates_total,
-    #                             min_date=opts.max_date)
-    # test = func_test.run()
-    # test.to_csv(os.path.join(sub_dir, "TestFull.csv"), index=False)
+    func_test = FullTestMaker(opts.candidate_file, opts.count_npz_sm,
+                                opts.background_stat_npz, tag=opts.tag,
+                                n_bg_clusters_threshold=opts.n_bg_clusters_threshold,
+                                t1_isolates_total=opts.t1_isolates_total,
+                                min_date=opts.max_date)
+    test = func_test.run()
+    test.to_csv(os.path.join(sub_dir, "TestFull.csv"), index=False)
 
 

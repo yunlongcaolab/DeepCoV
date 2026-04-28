@@ -50,38 +50,38 @@ def set_seed(seed):
 set_seed(38)
 
 
-def calculate_time_lead(y_true, y_pred):
-    """
-    Calculate the lead time of the prediction relative to the ground truth (integrated along the y-axis).
-    :param y_true: Ground truth curve (list or array).
-    :param y_pred: Predicted curve (list or array).
-    :return: Average lead time (positive values indicate the prediction is ahead, negative values indicate it is delayed).
-    """
-    assert len(y_true) == l
+# def calculate_time_lead(y_true, y_pred):
+#     """
+#     Calculate the lead time of the prediction relative to the ground truth (integrated along the y-axis).
+#     :param y_true: Ground truth curve (list or array).
+#     :param y_pred: Predicted curve (list or array).
+#     :return: Average lead time (positive values indicate the prediction is ahead, negative values indicate it is delayed).
+#     """
+#     assert len(y_true) == len(y_pred)
     
-    t = np.arange(len(y_true))
+#     t = np.arange(len(y_true))
     
-    y_min = max(np.nanmin(y_true), np.nanmin(y_pred))
-    y_max = min(np.nanmax(y_true), np.nanmax(y_pred))
-    y_common = np.linspace(y_min, y_max, 1000)
+#     y_min = max(np.nanmin(y_true), np.nanmin(y_pred))
+#     y_max = min(np.nanmax(y_true), np.nanmax(y_pred))
+#     y_common = np.linspace(y_min, y_max, 1000)
     
-    f_true = interp1d(y_true, t, kind='linear', bounds_error=False, fill_value=np.nan)
-    f_pred = interp1d(y_pred, t, kind='linear', bounds_error=False, fill_value=np.nan)
+#     f_true = interp1d(y_true, t, kind='linear', bounds_error=False, fill_value=np.nan)
+#     f_pred = interp1d(y_pred, t, kind='linear', bounds_error=False, fill_value=np.nan)
     
-    t_true_y = f_true(y_common)
-    t_pred_y = f_pred(y_common)
-    time_diff = t_true_y - t_pred_y  
+#     t_true_y = f_true(y_common)
+#     t_pred_y = f_pred(y_common)
+#     time_diff = t_true_y - t_pred_y  
     
-    valid_mask = ~np.isnan(time_diff)
-    y_valid = y_common[valid_mask]
-    time_diff_valid = time_diff[valid_mask]
+#     valid_mask = ~np.isnan(time_diff)
+#     y_valid = y_common[valid_mask]
+#     time_diff_valid = time_diff[valid_mask]
     
-    if len(y_valid) == 0:
-        return 0.0  
-    integral = simps(time_diff_valid, y_valid)
-    average_lead = integral / (y_max - y_min)
+#     if len(y_valid) == 0:
+#         return 0.0  
+#     integral = simps(time_diff_valid, y_valid)
+#     average_lead = integral / (y_max - y_min)
     
-    return average_lead
+#     return average_lead
 
 class EarlyStopping:
     def __init__(self,config,patience=7, verbose=False, delta=0):
@@ -175,7 +175,7 @@ def log_metrics_eval(config,
     rmse = mse**0.5
     pearson_corr, _ = pearsonr(filtered_target_ratio_t1_output,filtered_target_ratio_t1_label)
     spearman_corr, _ = spearmanr(filtered_target_ratio_t1_output,filtered_target_ratio_t1_label)
-    time_lead_area = calculate_time_lead(filtered_target_ratio_t1_label,filtered_target_ratio_t1_output)
+    # time_lead_area = calculate_time_lead(filtered_target_ratio_t1_label,filtered_target_ratio_t1_output)
    
     
 
