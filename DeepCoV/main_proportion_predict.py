@@ -158,7 +158,7 @@ def log_metrics_eval(config,
                     f"{status_log}_rmse":[],
                     f"{status_log}_pearson_corr":[],
                     f"{status_log}_spearman_corr":[],
-                    f"{status_log}_time_lead_area":[],
+                    # f"{status_log}_time_lead_area":[],
                 }
     
     csv_file_path_regres = os.path.join(config['other']['output_dir'], name,f"{status_log}_regres_outputs_labels-step-{global_step}.csv")
@@ -185,14 +185,14 @@ def log_metrics_eval(config,
                f"{status_log}_pearson_corr": pearson_corr, 
                f"{status_log}_spearman_corr": spearman_corr, 
                "step": global_step})
-    print(f"{status} at step {global_step} - MSE: {mse:.4f}, RMSE: {rmse:.4f}, time_lead_area: {time_lead_area:.4f}, Pearson Correlation: {pearson_corr:.4f}")
+    print(f"{status} at step {global_step} - MSE: {mse:.4f}, RMSE: {rmse:.4f}, Pearson Correlation: {pearson_corr:.4f}")
 
     metrics_history_eval["global_step"].append(global_step)
     metrics_history_eval[f"{status_log}_mse"].append(mse)
     metrics_history_eval[f"{status_log}_rmse"].append(rmse)
     metrics_history_eval[f"{status_log}_pearson_corr"].append(pearson_corr)
     metrics_history_eval[f"{status_log}_spearman_corr"].append(spearman_corr)
-    metrics_history_eval[f"{status_log}_time_lead_area"].append(time_lead_area)
+    # metrics_history_eval[f"{status_log}_time_lead_area"].append(time_lead_area)
     
 
 
